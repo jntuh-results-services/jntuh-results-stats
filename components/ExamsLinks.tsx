@@ -52,6 +52,7 @@ export const ExamsLinks = (props: Props) => {
                             degree: item.degree,
                             hallticket: props.hallticket!.toUpperCase(),
                             selectedType: props.selectedType,
+                            examName: item.exam_name,
                           }
                           : {
                             examCode: item.examCode,
@@ -63,6 +64,7 @@ export const ExamsLinks = (props: Props) => {
                             fromHallticket:
                               props.fromHallticket!.toUpperCase(),
                             toHallticket: props.toHallticket!.toUpperCase(),
+                            examName: item.exam_name,
                           },
                     }}
                   >
@@ -89,7 +91,7 @@ export const ExamsLinks = (props: Props) => {
           </div>
         </div>
       ) : (
-        <h1 className='mt-6 text-sm text-center text-white sm:text-lg'>
+        <h1 className='mt-6 text-sm text-center text-black dark:text-white sm:text-lg'>
           No {props.heading} Links Found for {props.selectedRegulation} Series!
         </h1>
       )}
